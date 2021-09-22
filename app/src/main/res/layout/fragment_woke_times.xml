@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".com.example.worktime.ui.workstime.WokeTimesFragment">
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:layoutDirection="ltr"
+            android:maxLines="1"
+            android:padding="4dp"
+            android:textColor="@color/lilac"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="example item" />
+
+        <TextView
+            android:id="@+id/tv_worked_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:layoutDirection="ltr"
+            android:maxLines="1"
+            android:padding="4dp"
+            android:textColor="@color/lilac"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="example item" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_worktime"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_count"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_date"
+            tools:listitem="@layout/rv_item" />
+
+        <EditText
+            android:id="@+id/et_fee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:ems="5"
+            android:hint="$$$"
+            android:inputType="number"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btn_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="37dp"
+            android:text="Count"
+            app:layout_constraintBottom_toBottomOf="@+id/et_fee"
+            app:layout_constraintStart_toEndOf="@+id/et_fee"
+            app:layout_constraintTop_toTopOf="@+id/et_fee" />
+
+
+        <EditText
+            android:id="@+id/et_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="37dp"
+            android:ems="5"
+            android:hint="1000"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_count"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_count"
+            app:layout_constraintTop_toTopOf="@+id/btn_count" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_margin="3dp"
+        android:background="@color/soft_lilac">
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:layoutDirection="ltr"
+            android:maxLines="1"
+            android:padding="4dp"
+            android:background="@color/lilac"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="example item" />
+
+        <TextView
+            android:id="@+id/tv_worked_time_m"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:layoutDirection="ltr"
+            android:maxLines="1"
+            android:layout_margin="3dp"
+            android:padding="4dp"
+            android:background="@color/lilac"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="24m" />
+
+        <TextView
+            android:id="@+id/tv_worked_time_h"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:layoutDirection="ltr"
+            android:maxLines="1"
+            android:layout_margin="3dp"
+            android:padding="4dp"
+            android:background="@color/lilac"
+            app:layout_constraintBottom_toBottomOf="@id/tv_worked_time_m"
+            app:layout_constraintEnd_toStartOf="@id/tv_worked_time_m"
+            app:layout_constraintTop_toTopOf="@id/tv_worked_time_m"
+            tools:text="24h" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
